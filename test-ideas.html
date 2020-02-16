@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Psychic Game</title>
 
-
+    <link rel="stylesheet" text="text/javascript" href="assets/javascript/game.js">
     <link rel="stylesheet" text="text/css" href="assets/css/style.css">
+
 </head>
     
 <body onload = "init()">
@@ -38,29 +39,7 @@
         </div>
     </div>
 
-    <script type="text/javascript">
-
-    var computerGuess;
-    var characters       = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-    var charactersLength = charactersLength;
-
-    function newGame(){
-        window.location.reload();
-    }
-
-    function init() {
-            computerGuess = characters[(Math.floor(Math.random() * characters.length))];
-            console.log(computerGuess);
-        }
-       
     
-
-        
-    
-    
-
-
-    </script>
-
 </body>
 </html>
+
