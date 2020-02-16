@@ -19,13 +19,13 @@
         </div>
 
         <div class = "panel">
-            <h3>Enter your guess below and press Enter</h3>
+            <h3 id="guess-text">Enter your guess below and press Enter</h3>
             <input type = "letter" id="inputBox" onchange="compareGuess()">
-            <p>Your Guesses so Far: </p>
+            <p>Number of Previous Attempts: <span id="attempts"></span></p>
         </div>
 
         <div class = "panel">
-            <p>Your Guesses Left: </p>
+            <p>Your Previous Gusses: </p>
             <p id = "guessLog"> </p> 
         </div>
 
@@ -41,8 +41,10 @@
     <script type="text/javascript">
 
     var computerGuess;
-    var characters       = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+    var characters       = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
     var charactersLength = charactersLength;
+    var userGuessLog = [];
+    var attempts = 0;
 
     function newGame(){
         window.location.reload();
@@ -54,9 +56,28 @@
     }
 
     function compareGuess(){
-        var userGuess = document.getElementById("inputBox").value;
-        console.log(userGuess)
+        var userGuess = " " + document.getElementById('inputBox').value;
+        console.log(userGuess);
+
+        userGuessLog.push(userGuess);
+        console.log(userGuessLog);
+        document.getElementById('guessLog').innerHTML = userGuessLog;
+
+        attempts++;
+        document.getElementById('attempts').innerHTML = attempts;
+
+            if(userGuess > computerGuess) {
+            document.getElementById('guess-text').innerHTML = "Guess Again, It's starting to seem you are not Psychic";
+            document.getElementById('inputBox').value = "";
+        }   else if (userGuess < computerGuess){
+            document.getElementById('guess-text').innerHTML = "Guess Again, It's starting to seem you are not Psychic";
+            document.getElementById('inputBox').value = "";
+        } else {
+            document.getElementById('guess-text').innerHTML = "Correct, You Must be Psychic!"
+        }
     }
+
+    
     
 
     
