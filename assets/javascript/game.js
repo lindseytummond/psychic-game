@@ -1,40 +1,76 @@
-//Use the src attribute of the script tag to link to this file, 
-//rather than embedding the code directly in your HTML document.
-//The src attribute specifies the URL of the media file to play. 
-//This attribute is required when <source> is used in <audio> and <video>.
 var computerGuess;
-    var characters       = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-    var charactersLength = charactersLength;
-    var userGuessLog = [];
-    var attempts = 0;
+var characters       = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+var charactersLength = charactersLength;
+var userGuessLog = [];
+var attempts = 0;
+var maxGuesses = 10;
 
-    function newGame(){
-        window.location.reload();
-    }
+function gameEnded(){
+    document.getElementById('newGameButton').style.display = "inline"; 
+    document.getElementById ('easyBtn').style.display ='none';
+    document.getElementById ('hardBtn').style.display ='none';
+    document.getElementById ('inputBox').setAttribute ('readonly', 'readonly');
+}
 
-    function init() {
-            computerGuess = characters[(Math.floor(Math.random() * characters.length))];
-            console.log(computerGuess);
-    }
+function easyMode(){
+    maxGuesses = 10;
+    document.getElementById ('easyBtn').className = 'activeButton';
+    document.getElementById ('hardBtn').className = '';
+}
 
-    function compareGuess(){
-        var userGuess = " " + document.getElementById('inputBox').value;
-        console.log(userGuess);
+function hardMode(){
+    maxGuesses = 5;
+    document.getElementById ('hardBtn').className = 'activeButton';
+    document.getElementById ('easyBtn').className = '';
+}
 
-        userGuessLog.push(userGuess);
-        console.log(userGuessLog);
-        document.getElementById('guessLog').innerHTML = userGuessLog;
+function newGame(){
+    window.location.reload();
+}
 
-        attempts++;
-        document.getElementById('attempts').innerHTML = attempts;
+function init() {
+    computerGuess = characters[(Math.floor(Math.random() * characters.length))];
+    console.log(computerGuess);
+    document.getElementById('newGameButton').style.display = "none";       
+}
 
-            if(userGuess > computerGuess) {
+function compareGuess(){
+    var userGuess = "" + document.getElementById('inputBox').value;
+    console.log(userGuess);
+
+    userGuessLog.push(userGuess);
+    console.log(userGuessLog);
+    document.getElementById('guessLog').innerHTML = userGuessLog;
+
+    attempts++;
+    document.getElementById('attempts').innerHTML = attempts;
+
+    if(userGuessLog.length < maxGuesses){
+        if(userGuess > computerGuess) {
             document.getElementById('guess-text').innerHTML = "Guess Again, It's starting to seem you are not Psychic";
             document.getElementById('inputBox').value = "";
         }   else if (userGuess < computerGuess){
             document.getElementById('guess-text').innerHTML = "Guess Again, It's starting to seem you are not Psychic";
             document.getElementById('inputBox').value = "";
         } else {
-            document.getElementById('guess-text').innerHTML = "Correct, You Must be Psychic!"
+            document.getElementById('guess-text').innerHTML = 'You Win, Your Psychic Abilities guessed the Letter in ' + attempts + ' attempts';
+            document.getElementById('container').style.backgroundColor = 'green';
+            gameEnded();
+        }
+
+    } else {
+        if(userGuess < computerGuess){
+            document.getElementById('guess-text').innerHTML = 'You Lose, You must Not be Psychic. The correct Letter is ' + computerGuess;
+            document.getElementById('container').style.backgroundColor = '#e82c4e';
+            gameEnded();
+        } else if (userGuess < computerGuess){
+            document.getElementById('guess-text').innerHTML = 'You Lose, You must Not be Psychic. The correct Letter is ' + computerGuess;
+            document.getElementById('container').style.backgroundColor = '#e82c4e';
+            gameEnded();
+        } else {
+            document.getElementById('guess-text').innerHTML = 'You Win, Your Psychic Abilities guessed the Letter in ' + attempts + ' attempts';
+            document.getElementById('container').style.backgroundColor = 'green';
+            gameEnded();
         }
     }
+}
