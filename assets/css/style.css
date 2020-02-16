@@ -21,14 +21,14 @@ h2{
     max-width: 60%;
     margin: 15px auto;
     border-radius: 10px;
-    padding: 30px;
+    padding: 20px;
     background: #FF8C19;
     text-align: center;
     z-index: 1;
 }
 
-.container {
-    width: 70%;
+#container {
+    max-width: 80%;
     margin: 15px auto;  
     border-radius: 10px;
     padding: 30px;
@@ -37,7 +37,7 @@ h2{
 button {
     background:#00008C;
     height: 45px;
-    width: 40%;
+    width: 45%;
     margin-bottom: 10px;
     border-radius: 10px;
     color: white;

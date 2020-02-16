@@ -4,6 +4,9 @@ var charactersLength = charactersLength;
 var userGuessLog = [];
 var attempts = 0;
 var maxGuesses = 10;
+var compareOutcome;
+var winAttempts = 0;
+var loseAttempts = 0;
 
 function gameEnded(){
     document.getElementById('newGameButton').style.display = "inline"; 
@@ -33,6 +36,14 @@ function init() {
     console.log(computerGuess);
     document.getElementById('newGameButton').style.display = "none";       
 }
+
+//function compareOutcome (){
+    //attempts++;
+    //document.getElementById('winLog').innerHTML = winAttempts;
+//}
+
+//loseAttempts++;
+    //document.getElementById('loseLog').innerHTML = loseAttempts;
 
 function compareGuess(){
     var userGuess = "" + document.getElementById('inputBox').value;
