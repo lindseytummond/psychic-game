@@ -20,7 +20,7 @@
 
         <div class = "panel">
             <h3>Enter your guess below and press Enter</h3>
-            <input type = "letter">
+            <input type = "letter" id="inputBox" onchange="compareGuess()">
             <p>Your Guesses so Far: </p>
         </div>
 
@@ -51,8 +51,14 @@
     function init() {
             computerGuess = characters[(Math.floor(Math.random() * characters.length))];
             console.log(computerGuess);
-        }
-       
+    }
+
+    function compareGuess(){
+        var userGuess = document.getElementById("inputBox").value;
+        console.log(userGuess)
+    }
+    
+
     
 
         
