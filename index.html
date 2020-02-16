@@ -5,28 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Psychic Game</title>
 
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" text="text/css" href="assets/css/style.css">
 </head>
     
 <body onload = "init()">
 
     <div id = "container">
-        <div class = "panel">
-            <h2>Madam Sylvie is a Psychic...Are You?</h2>
-            <h3>Guess a Letter between A -Z</h3>
-            <hr>
 
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="assets/images/background-video.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class = "panel">
+            <h2>Are You Pyschic?</h2>
+            <br>
+            <h3>Guess a Letter between A -Z</h3>
+            <br>
+            <hr id="divider">
+            <br>
             <p>Select a difficulty setting:</p>
-            
-            <button id="easyBtn" onclick="easyMode()" class="">Easy Mode: Guess in 10 attempts (default)</button>
-            <button id="hardBtn" onclick="hardMode()" class="">Hard Mode: Guess in 5 attempts</button>
+            <br>
+            <button id="easyBtn" onclick="easyMode()" class="">Easy Mode: 10 attempts (default)</button>
+            <button id="hardBtn" onclick="hardMode()" class="">Hard Mode: 5 attempts</button>
             <button id="newGameButton" onclick="newGame()">NEW GAME</button>
         </div>
 
         <div class = "panel">
             <h3 id="guess-text">Enter your guess below and press Enter</h3>
+            <br>
             <input type = "letter" id="inputBox" onchange="compareGuess()" autocomplete="off">
+            <br>
+            <br>
             <p>Number of Previous Attempts: <span id="attempts"></span></p>
         </div>
 
