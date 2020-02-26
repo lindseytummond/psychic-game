@@ -7,6 +7,8 @@ The game will tally wins, losses, guesses left, guesses so far with both an easy
 ### Link to game: https://lindseytummond.github.io/psychic-game/
 
 ### How to Play:
-Choose a letter from A - Z and test your psycic ability to see if you can read a computers mind!
+Choose a letter from A - Z and test your psychic ability to see if you can read a computers mind!
 
-![](assets/images/psychic-game-finished.png)
+<a href="https://lindseytummond.github.io/psychic-game/">
+  <img src="assets/images/psychic-game-finished.png">
+</a>
