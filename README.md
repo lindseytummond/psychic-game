@@ -9,4 +9,4 @@ The game will tally wins, losses, guesses left, guesses so far with both an easy
 ### How to Play:
 Choose a letter from A - Z and test your psycic ability to see if you can read a computers mind!
 
-![](images/psychic-game-finished)
+![](assets/images/psychic-game-finished.png)
