@@ -10,5 +10,5 @@ The game will tally wins, losses, guesses left, guesses so far with both an easy
 Choose a letter from A - Z and test your psychic ability to see if you can read a computers mind!
 
 <a href="https://lindseytummond.github.io/psychic-game/" target="_blank">
-  <img src="assets/images/psychic-game-finished.png">
+  <img src="assets/images/psychic-game-finished.jpg" alt="psychic-game-finished">
 </a>
