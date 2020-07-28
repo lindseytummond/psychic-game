@@ -1,6 +1,7 @@
 # Are You Psychic? Game
+<br><br>
 
-## Overview:
+### Overview:
 A fun and interactive game for web browsers built using HTML5, CSS, and JavaScript.
 The game will tally wins, losses, guesses left, guesses so far with both an easy (5 guesses) and hard (10 guesses) mode.
 
@@ -11,12 +12,12 @@ Lindsey Tummond
 - <a href="https://www.linkedin.com/in/lindsey-tummond-b86aa341/" target="_blank"> LinkedIn </a>
 
 ## Learning Points:
-- exploration into Javascript, specifically ‘getElementById’
-- utilization of ‘Math.floor’ and ‘Math.random’
+- exploration into Javascript, specifically 'getElementById'
+- utilization of 'Math.floor' and 'Math.random'
 - understanding of multiple files and how to link file structure
 
 ## Technologies:
--	  HTML
+-   HTML
 -   CSS
 -   Javascript
 -   GitHub
@@ -27,5 +28,5 @@ Choose a letter from A - Z to test your psychic ability and see if you can read 
 
 ## App Example:
 <a href="https://lindseytummond.github.io/psychic-game/" target="_blank">
-  <img src="assets/images/psychic-game-finished.jpg" alt="psychic-game-finished">
+  <img src="assets/images/psychic-game-readme.gif" alt="psychic-game-finished">
 </a>
