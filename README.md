@@ -1,5 +1,4 @@
 # Are You Psychic? Game
-<br>
 
 ### Overview:
 A fun and interactive game for web browsers built using HTML5, CSS, and JavaScript.
