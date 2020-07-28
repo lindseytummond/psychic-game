@@ -12,9 +12,9 @@ Lindsey Tummond
 - <a href="https://www.linkedin.com/in/lindsey-tummond-b86aa341/" target="_blank"> LinkedIn </a>
 
 ## Learning Points:
-- exploration into Javascript, specifically 'getElementById'
-- utilization of 'Math.floor' and 'Math.random'
-- understanding of multiple files and how to link file structure
+- Exploration into Javascript, specifically `getElementById`
+- Utilization of `Math.floor` and `Math.random`
+- Understanding of multiple files and how to link file structure
 
 ## Technologies:
 -   HTML
@@ -31,6 +31,3 @@ Choose a letter from A - Z to test your psychic ability and see if you can read 
   <img src="assets/images/pyschic-game-readme.gif">
 </p>
 
-<a href="https://lindseytummond.github.io/psychic-game/" target="_blank">
-  <img src="assets/images/psychic-game-readme.gif" alt="psychic-game">
-</a>
