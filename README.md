@@ -1,5 +1,5 @@
 # Are You Psychic? Game
-<br><br>
+<br>
 
 ### Overview:
 A fun and interactive game for web browsers built using HTML5, CSS, and JavaScript.
@@ -27,6 +27,10 @@ Use the following link https://lindseytummond.github.io/psychic-game/ to open th
 Choose a letter from A - Z to test your psychic ability and see if you can read the psychic's mind!
 
 ## App Example:
+<p align="center">
+  <img src="assets/images/pyschic-game-readme.gif">
+</p>
+
 <a href="https://lindseytummond.github.io/psychic-game/" target="_blank">
-  <img src="assets/images/psychic-game-readme.gif" alt="psychic-game-finished">
+  <img src="assets/images/psychic-game-readme.gif" alt="psychic-game">
 </a>
